@@ -6,9 +6,9 @@ module.exports = {
             where: {
                 faculty_id
             },
-            include: {
-                model: Faculty
-            }
+            attributes: {
+                exclude: ['faculty_id']
+            },
         });
     }
 }

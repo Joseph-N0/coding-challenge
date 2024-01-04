@@ -1,16 +1,15 @@
-const { getMajorsByFacultyId } = require("../services/majorService");
+const { getFacultiesByUniversityId } = require("../services/facultyService");
 
 module.exports = {
-    async getMajorsByFaculty(req, res) {
+    async getFacultiesByUniversity(req, res) {
         try {
-            
-            const { faculty_id } = req.params;
-            if (!faculty_id) {
+            const { university_id } = req.params;
+            if(!university_id) {
                 res.status(400).json({
-                    error: "No faculty_id was provided"
+                    error: "No university_id was provided"
                 })
             }
-            const result =  await getMajorsByFacultyId(faculty_id);
+            const result =  await getFacultiesByUniversityId(university_id);
             res.status(200).json(result);
         } catch (err) {
             console.log(err)

@@ -7,7 +7,7 @@ module.exports = {
 
             if (!major_id || !degree_id) {
                 res.status(400).json({
-                    error: `Missing major_id or degree_id in request`
+                    error: `No major_id or degree_id was provided`
                 })
             }
 

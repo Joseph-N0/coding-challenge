@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             'foreignKey': 'university_id'
         });
         Faculty.hasMany(models.Major, {
-            'foreignKey': 'id'
+            'foreignKey': 'faculty_id'
         });
     };
 

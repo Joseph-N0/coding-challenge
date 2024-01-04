@@ -9,6 +9,9 @@ module.exports = {
                     { major_id},
                     { degree_id }
                 ]
+            },
+            attributes: {
+                exclude: ['major_id', 'degree_id']
             }
         });
     }

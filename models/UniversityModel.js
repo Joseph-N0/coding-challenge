@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
 
     University.associate = function (models) {
         University.hasMany(models.Faculty, {
-            'foreignKey': 'faculty_id'
+            'foreignKey': 'university_id'
         });
     }
 
